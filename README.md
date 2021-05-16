@@ -1,6 +1,6 @@
 # Violência contra a mulher
 
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+O objetivo desse projeto, é a criação de um site de sororidade, no qual  as mulheres possam se identificar e se sentirem acolhidas, lendo testemunhos de vítimas de violência, com espaço para compartilhar a própria história, assim inspirando outras mulheres e se sentirem mais libertas.
 
 ## Alunos integrantes da equipe
 
@@ -12,8 +12,11 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* João Carlos Oliveira Caetano
+* Rommel Vieira Carneiro
+* Cristiane Neri Nobre
+* Fatima de Lima Procopio Duarte
+* Ilo Amy Saldanha Rivero
 
 ## Instruções de utilização
 
