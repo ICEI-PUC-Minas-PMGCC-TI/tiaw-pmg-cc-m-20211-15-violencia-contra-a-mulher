@@ -6,9 +6,9 @@ O objetivo desse projeto, é a criação de um site de sororidade, no qual  as m
 
 * Arthur Dias
 * Guilherme Ferraz
-* Maria
-* Tainan
-* Wanisléia
+* Maria Souza
+* Tainan Bueno
+* Wanisléia Norato
 
 ## Professores responsáveis
 
