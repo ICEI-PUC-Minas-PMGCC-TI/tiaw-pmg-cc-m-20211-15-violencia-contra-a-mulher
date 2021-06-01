@@ -1,87 +1,128 @@
 #nomeUsuario{
     font-size: 13px;
-}
-
-header a{
-    width: 190px;
-    padding: none;
-}
-
-ul .active{
+    }
+    
+    ul .active{
     width: 50px;
-}
-
-ul .seg{
+    }
+    
+    ul .seg{
     width: 110px;
-}
-
-.inp{
-    margin-left: 325px;
-    width: 165px !important;
-}
-
-#navbarResponsive{
+    }
+    
+    #navbarResponsive{
     width: 500px;
     height: 64px;
-}
-
-main{
+    }
+    
+    main{
     margin-top: 80px;
-}
-
-#div1{
+    }
+    
+    #div1{
     margin-top: 20px;
     font-family: 'Times New Roman', Times, serif;
-}
-
-.botao1{
+    }
+    
+    .botao1{
     font-size: 15px;
     border-radius: 5px;
     background-color: #f7b1e6;
     border-color: pink;
-}
-
-.logo-rodape{
+    }
+    
+    .logo-rodape{
     text-align: center;
     color: white !important;
-}
-
-#testemunhos{
-    padding:20px;
-}
-
-#comp{
+    }
+    
+    #comp{
     background-color: white;
     margin-bottom: 20px;
     padding: 10px;
-}
-
-input{
+    }
+    
+    p{
+    font-weight: 300;
+    }
+    
+    input{
     border-radius: 15px;
-}
-
-.botao2{
+    }
+    
+    .botao2{
     background-color: black !important;
-    border-radius: 5px;
-    color: white;
     border: none;
-    padding: 7px;
-}
-
-#quem{
+    }
+    
+    .quem{
     background-color: white;
-    margin: 0px 15px
-}
-
-#nos{
+    
+    }
+    
+    #nos{
     margin-bottom: 10px;
-}
-
-.telefones p{
+    }
+    
+    .telefones p{
     font-size:20px;
-}
-
-
-#exampleCheck1{
+    }
+    
+    
+    #exampleCheck1{
     margin-left: 0.5px !important;
-}
+    }
+    
+    *{
+    scroll-behavior: smooth;
+    }
+    
+    .card{
+    border: none;
+    }
+    
+    .titulo-secao{
+    font-family: 'Fjalla One', sans-serif;
+    }
+    
+    .seleciona{
+    border-color: #2e2e2e;
+    }
+    
+    
+    .lancamentos{
+    background-color:" #e3e3e3;"
+    }
+    
+    .seleciona{
+    border-color: #2e2e2e;
+    }
+    
+    
+    .icone{
+    font-size: 20px;
+    background-color: #f2f2f2;
+    color: #878787;
+    padding: 20px;
+    border-radius: 90px;
+    }
+    
+    
+    .tit-papa{
+    font-weight: 670;
+    }
+    
+    
+    .logo-rodape{
+    text-align: center;
+    font-size: 20px;
+    color: #878787;
+    }
+    
+    .bg-padrao{
+    background-color: #f7b1e6; 
+    }
+    
+    .usuariocima{
+    background-color: white;
+    }
