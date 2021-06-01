@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testemunhos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06c06c3fc2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styleRelatos.css" rel="stylesheet">
+    <script src="relatos.js"></script>
+    <script> 
+        function exibeRelatos() {   
+            let listaRelatos = '';
+            var relatosJSON = localStorage.getItem('db_relatos');
+            db_relatos = JSON.parse(relatosJSON);  
+            console.log(db_relatos.relatos);
+            
+            for (i = 1; i < db_relatos.relatos.length; i++) {
+                let relatos = db_relatos.relatos[i];
+                listaRelatos += 
+                `<div class = "row" style = "background-color: #fadff3;">
+                    <div class = "col-3 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <center>
+                        <span class="badge badge-dark icone"><i class="fas fa-user"></i></span>
+                        <h5 style="color: black;" class="mt-4 tit-papa"><strong>${relatos.Nome}</strong></h5>
+                        <p>Idade na época: ${relatos.Idade}<br>Data do ocorrido: ${relatos.Data}</p>
+                    </center>
+                    </div>
+                    <div class = "col-9 col-sm-12 col-md-6 col-lg-8 col-xl-9"><br>
+                        <p>${relatos.Testemunho}</p>
+                    </div>
+                </div>
+                <br>`;
+            }
+            
+            document.getElementById("testemunhos").innerHTML = listaRelatos;
+
+        }
+        window.addEventListener('load', exibeRelatos);
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+    
+        <header>
+            <div class = "row">
+                <a href="index.html"><i class="fas fa-arrow-circle-left" id = "font"><p id = "volt">voltar à página inicial</p></i></a>
+            </div>
+        </header>
+
+
+        <main>
+            <br>
+            <center>
+                <h1><strong>Testemunhos</strong></h1>
+            </center>
+            <br>             
+        
+            <div class="row">
+                <div class="col-sm-12" id = "testemunhos"></div>
+            </div>
+        </main>
+    
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+</body>
+
+</html>

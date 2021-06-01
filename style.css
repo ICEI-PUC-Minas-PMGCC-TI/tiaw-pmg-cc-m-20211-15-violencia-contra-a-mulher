@@ -1,0 +1,87 @@
+#nomeUsuario{
+    font-size: 13px;
+}
+
+header a{
+    width: 190px;
+    padding: none;
+}
+
+ul .active{
+    width: 50px;
+}
+
+ul .seg{
+    width: 110px;
+}
+
+.inp{
+    margin-left: 325px;
+    width: 165px !important;
+}
+
+#navbarResponsive{
+    width: 500px;
+    height: 64px;
+}
+
+main{
+    margin-top: 80px;
+}
+
+#div1{
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.botao1{
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #f7b1e6;
+    border-color: pink;
+}
+
+.logo-rodape{
+    text-align: center;
+    color: white !important;
+}
+
+#testemunhos{
+    padding:20px;
+}
+
+#comp{
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+input{
+    border-radius: 15px;
+}
+
+.botao2{
+    background-color: black !important;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 7px;
+}
+
+#quem{
+    background-color: white;
+    margin: 0px 15px
+}
+
+#nos{
+    margin-bottom: 10px;
+}
+
+.telefones p{
+    font-size:20px;
+}
+
+
+#exampleCheck1{
+    margin-left: 0.5px !important;
+}
