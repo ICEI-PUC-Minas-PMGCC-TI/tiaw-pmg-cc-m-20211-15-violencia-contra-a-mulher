@@ -8,11 +8,13 @@
     <meta name="author" content="Guilherme">
     <title>SOS MULHERES</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/06c06c3fc2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <script src="login.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="index.js"></script>
     <script>      
         if (!usuarioCorrente.login) {
             window.location.href = LOGIN_URL;
@@ -127,9 +129,10 @@
                         <span class="badge badge-dark icone"><i class="fas fa-user"></i></span>
                         <h5 style="color: black;" class="mt-4 tit-papa">Jade dos Santos</h5>
                         <p>Idade na época: 14</p>
-                        <p>Data do ocorrido: 2014-05-12</p>
+                        <p>Data do ocorrido: 2014/05/12</p>
                     </div>
                     <div class="col-xl-9 mt-2 " style="text-align: left;">
+                        <br>
                         <br>
                         <p>
                             Eu fui estuprada quando tinha 14 anos, depois do ataque, eu sofri com vários problemas psicológicos, tive que tomar antidepressivos, e só depois de 2 anos,  tive coragem de contar pra minha família. Eu me sentia suja e culpada pelo ocorrido e no dia após, meu corpo estava todo dolorido e  com muitas marcas físicas. 
@@ -140,9 +143,10 @@
                         <span class="badge badge-dark icone"><i class="fas fa-user"> </i></span>
                         <h5 style="color: black;" class="mt-4 tit-papa">Bruna Duarte</h5>
                         <p>Idade na época: 10</p>
-                        <p>Data do ocorrido: 1999-11-07</p>
+                        <p>Data do ocorrido: 1999/11/07</p>
                     </div>
                     <div class="col-xl-9 mt-2 " style="text-align: left;">
+                        <br>
                         <br>
                         <p>
                             Desde a infância à adolescência, eu sofria abusos sexuais do meu tio, por anos, sendo ameaçada para não contar para os meus pais. Quando fiquei maior de idade, tomei coragem e denunciei o abusador.
@@ -153,9 +157,10 @@
                         <span class="badge badge-dark icone"><i class="fas fa-user"></i></span>
                         <h5 style="color: black;" class="mt-4 tit-papa">Celeste Aparecida</h5>
                         <p>Idade na época: 35</p>
-                        <p>Data do ocorrido: 2009-06-30</p>
+                        <p>Data do ocorrido: 2009/06/30</p>
                     </div>
                     <div class="col-xl-9 mt-2 " style="text-align: left;">
+                        <br>
                         <br>
                         <p>
                             Quando me casei, eu não imaginava que viveria um pesadelo com meu falecido marido alcoólatra, ele me espancava e humilhava porém eu não o larguei. Aos 41 anos eu fiquei viúva.
@@ -166,9 +171,10 @@
                         <span class="badge badge-dark icone"><i class="fas fa-user"> </i></span>
                         <h5 style="color: black;" class="mt-4 tit-papa">Ana Vitoria</h5>
                         <p>Idade na época: 12</p>
-                        <p>Data do ocorrido: 2014-01-22</p>
+                        <p>Data do ocorrido: 2014/01/22</p>
                     </div>
                     <div class="col-xl-9 mt-2 " style="text-align: left;">
+                        <br>
                         <br>
                         <p>
                             Eu tive um relacionamento extremamente abusivo, onde sofri violência psicológica e física, e quando criança meu ex padrasto me violentava fisicamente.
@@ -314,7 +320,12 @@
                 </div>
            </section>
 
-           <section>
+           <div id="map"></div>
+
+            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+            
+
+                <section>
                 <div>
                     <img src="im0.jpeg" alt="im1" width="100%;">
                 </div>
@@ -339,6 +350,11 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="relatos.js"></script>
+
+    <script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpqIHrShPCNgA-9wdCHMU8hwTryQZ1Zqk&callback=initMap&libraries=&v=weekly"
+        async
+    </script>
 
 </body>
 
