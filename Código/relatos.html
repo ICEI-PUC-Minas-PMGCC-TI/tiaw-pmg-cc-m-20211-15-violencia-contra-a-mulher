@@ -7,38 +7,73 @@
     <title>Testemunhos</title>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/06c06c3fc2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="css/styleRelatos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="styleRelatos.css" rel="stylesheet">
     <script src="relatos.js"></script>
     <script> 
         function exibeRelatos() {   
             let listaRelatos = '';
+            let id = JSON.parse(sessionStorage.getItem('usuarioCorrente')).id;
             var relatosJSON = localStorage.getItem('db_relatos');
             db_relatos = JSON.parse(relatosJSON);  
             console.log(db_relatos.relatos);
-            
+
             for (i = 1; i < db_relatos.relatos.length; i++) {
                 let relatos = db_relatos.relatos[i];
-                listaRelatos += 
-                `<div class = "row" style = "background-color: #fadff3;">
-                    <div class = "col-3 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                    <center>
-                        <span class="badge badge-dark icone"><i class="fas fa-user"></i></span>
-                        <h5 style="color: black;" class="mt-4 tit-papa"><strong>${relatos.Nome}</strong></h5>
-                        <p>Idade na época: ${relatos.Idade}<br>Data do ocorrido: ${relatos.Data}</p>
-                    </center>
-                    </div>
-                    <div class = "col-9 col-sm-12 col-md-6 col-lg-8 col-xl-9"><br>
-                        <p>${relatos.Testemunho}</p>
-                    </div>
-                </div>
-                <br>`;
+                if(relatos != null){
+                    if(relatos.Id == id){
+                    
+                        listaRelatos += 
+                        `<div class = "row" style = "background-color: #fadff3;">
+                            <div class = "col-3 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <center>
+                                <div class="row">
+                                    <div class = "col-6">
+                                        <button type="button" onClick="getId(this.id)" id="${i}" class="btn editar" data-bs-toggle="modal" data-bs-target="#editar"><i class="far fa-edit" style="color:black;"></i></button>
+                                    </div>
+                                    <div class="col-6">    
+                                        <button type="button" onClick="apagarRelato(this.id)" id="${i}" class="btn apagar"><i class="far fa-trash-alt" style="color:black;"></i></button>                            
+                                    </div>
+                                </div>
+                                <span class="badge bg-dark icone"><i class="fas fa-user"></i></span>
+                                <h5 style="color: black;" class="mt-4 tit-papa"><strong>${relatos.Nome}</strong></h5>
+                                <p>Idade na época: ${relatos.Idade}<br>Data do ocorrido: ${relatos.Data}</p>
+                            </center>
+                            </div>
+                            <div class = "col-9 col-sm-12 col-md-6 col-lg-8 col-xl-9"><br>
+                                <p>${relatos.Testemunho}</p>
+                            </div>
+                        </div>
+                        <br>`;
+                    }else{
+                        listaRelatos += 
+                        `<div class = "row" style = "background-color: #fadff3;">
+                            <div class = "col-3 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <center>
+                                <span class="badge bg-dark icone"><i class="fas fa-user"></i></span>
+                                <h5 style="color: black;" class="mt-4 tit-papa"><strong>${relatos.Nome}</strong></h5>
+                                <p>Idade na época: ${relatos.Idade}<br>Data do ocorrido: ${relatos.Data}</p>
+                            </center>
+                            </div>
+                            <div class = "col-9 col-sm-12 col-md-6 col-lg-8 col-xl-9"><br>
+                                <p>${relatos.Testemunho}</p>
+                            </div>
+                        </div>
+                        <br>`;
+                    }
+                }
+
+                
             }
             
             document.getElementById("testemunhos").innerHTML = listaRelatos;
 
         }
         window.addEventListener('load', exibeRelatos);
+
+        onload = () => {document.getElementById('editarRelato').addEventListener('click', edicaoRelato);}
+
+
     </script>
 
 </head>
@@ -64,14 +99,55 @@
             <div class="row">
                 <div class="col-sm-12" id = "testemunhos"></div>
             </div>
+
+            <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Edição</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="col-xl-8" id="formEdit">
+                            <div id="comp">
+                                <div>
+                                    <label for="nomeRel">Nome:</label>
+                                    <input type="text" id="nomeEdit" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+                                    <br>
+                                </div>
+                                <div>
+                                    <label for="idadeRel">Idade na época: </label>
+                                    <input type="text" id="idadeEdit" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+                                    <br>
+                                </div>
+                                <div>
+                                    <label for="dataRel">Data do ocorrido: </label>
+                                    <input type="date" id="dataEdit" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+                                    <br>
+                                </div>
+                                <div>
+                                    <label for="testemunhoRel">Relato: </label>
+                                    <textarea class="form-control" id ="testemunhoEdit" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                                    <br>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      <button type="submit" form="formEdit" id="editarRelato"  class="btn btn-primary">Editar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
         </main>
     
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
