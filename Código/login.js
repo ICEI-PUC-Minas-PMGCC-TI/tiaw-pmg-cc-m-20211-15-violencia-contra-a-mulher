@@ -87,17 +87,17 @@ function setUserPass () {
 
 initLoginApp ();
 
-function anonimato(){
+function Anonimato(){
+    console.log("Entrei");
+    let select=document.getElementById("Anonimo");
+    let nome=document.getElementById("nomeRel");
 
-let select=document.getElementById("anonimo");
-let nome=document.getElementById("nomeRel");
-
-if (select.checked){
-    nome.disabled=true;
-    nome.value="Anonimo"
-} else {
-    nome.disabled=false;
-    nome.value=""
-}
+    if (select.checked){
+        nome.disabled=true;
+        nome.value="Anonimo"
+    } else {
+        nome.disabled=false;
+        nome.value=""
+    }
 
 }
