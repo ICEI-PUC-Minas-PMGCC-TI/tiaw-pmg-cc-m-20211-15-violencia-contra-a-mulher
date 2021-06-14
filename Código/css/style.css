@@ -1,50 +1,128 @@
-*{
-scroll-behavior: smooth;
-}
-body {
-padding-top: 56px;
-
-}
-
-.card{
-border: none;
-}
-
-.titulo-secao{
-font-family: 'Fjalla One', sans-serif;
-}
-
-.seleciona{
-border-color: #2e2e2e;
-}
-
-
-.lancamentos{
-background-color: #e3e3e3;";
-}
-
-.seleciona{
+#nomeUsuario{
+    font-size: 13px;
+    }
+    
+    ul .active{
+    width: 50px;
+    }
+    
+    ul .seg{
+    width: 110px;
+    }
+    
+    #navbarResponsive{
+    width: 500px;
+    height: 64px;
+    }
+    
+    main{
+    margin-top: 80px;
+    }
+    
+    #div1{
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .botao1{
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #f7b1e6;
+    border-color: pink;
+    }
+    
+    .logo-rodape{
+    text-align: center;
+    color: white !important;
+    }
+    
+    #comp{
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    }
+    
+    p{
+    font-weight: 300;
+    }
+    
+    input{
+    border-radius: 15px;
+    }
+    
+    .botao2{
+    background-color: black !important;
+    border: none;
+    }
+    
+    .quem{
+    background-color: white;
+    
+    }
+    
+    #nos{
+    margin-bottom: 10px;
+    }
+    
+    .telefones p{
+    font-size:20px;
+    }
+    
+    
+    #exampleCheck1{
+    margin-left: 0.5px !important;
+    }
+    
+    *{
+    scroll-behavior: smooth;
+    }
+    
+    .card{
+    border: none;
+    }
+    
+    .titulo-secao{
+    font-family: 'Fjalla One', sans-serif;
+    }
+    
+    .seleciona{
     border-color: #2e2e2e;
     }
- 
     
-.icone{
+    
+    .lancamentos{
+    background-color:" #e3e3e3;"
+    }
+    
+    .seleciona{
+    border-color: #2e2e2e;
+    }
+    
+    
+    .icone{
     font-size: 20px;
     background-color: #f2f2f2;
     color: #878787;
     padding: 20px;
     border-radius: 90px;
     }
- 
     
-.tit-papa{
+    
+    .tit-papa{
     font-weight: 670;
     }
- 
-
-.logo-rodape{
+    
+    
+    .logo-rodape{
     text-align: center;
     font-size: 20px;
     color: #878787;
-}
-
+    }
+    
+    .bg-padrao{
+    background-color: #f7b1e6; 
+    }
+    
+    .usuariocima{
+    background-color: white;
+    }
